@@ -6,28 +6,64 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#746474"
+    android:background="#fff"
     android:padding="20dp"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/btn_login"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="70dp"
         android:text="Login "
         android:textSize="22sp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
+        app:icon="@drawable/login"
         android:onClick="Login"
         android:background="@drawable/rounded"/>
     <Button
         android:id="@+id/btn_Signup"
-        android:layout_width="200dp"
+        android:layout_width="300dp"
         android:layout_height="70dp"
         android:text="Signup "
         android:textSize="22sp"
+        app:icon="@drawable/ic_baseline_tablet_24"
         android:layout_gravity="center"
         android:onClick="Signup"
         android:layout_marginTop="20dp"
         android:background="@drawable/rounded"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Enter Your Name"
+        android:drawableLeft="@drawable/login"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Password"
+            android:inputType="numberPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:passwordToggleEnabled="true"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Confirm Password"
+            android:inputType="numberPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
 </LinearLayout>
